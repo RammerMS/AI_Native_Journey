@@ -1,0 +1,294 @@
+/* Training Mode Specific Styles */
+
+.training-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 80px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.prompt-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.prompt-section h3 {
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    font-size: 1.4em;
+}
+
+#currentPrompt {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.prompt-description {
+    color: #7f8c8d;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.progress-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.progress-section p {
+    margin: 0 0 15px 0;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+#submitButton {
+    background-color: #27ae60;
+    font-weight: bold;
+}
+
+#submitButton:hover {
+    background-color: #229954;
+}
+
+#submitButton:active {
+    background-color: #1e8449;
+}
+
+#submitButton:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.stats-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.stats-section h3 {
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+.stat-value {
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.submission-history {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.submission-history h3 {
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.history-label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.history-time {
+    font-size: 0.8em;
+    color: #7f8c8d;
+}
+
+.empty-history {
+    text-align: center;
+    color: #bdc3c7;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.custom-submission {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-submission h3 {
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ecf0f1;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+#customSubmitButton {
+    background-color: #9b59b6;
+    width: 100%;
+}
+
+#customSubmitButton:hover {
+    background-color: #8e44ad;
+}
+
+#customSubmitButton:active {
+    background-color: #7d3c98;
+}
+
+/* Success/Error Messages */
+.message {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .training-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .left-panel, .right-panel {
+        margin-top: 20px;
+    }
+    
+    .right-panel {
+        min-width: auto;
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .training-container {
+        margin-top: 20px;
+    }
+    
+    .prompt-section, .progress-section, .stats-section, 
+    .submission-history, .custom-submission {
+        padding: 15px;
+    }
+    
+    .stat-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .history-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+} 
