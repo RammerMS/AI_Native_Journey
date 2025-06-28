@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Mode - AI Drawing Recognition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="training-style.css">
+</head>
+<body>
+    <h1>Training Mode - Help Improve AI Recognition!</h1>
+    
+    <div class="training-container">
+        <div class="left-panel">
+            <div class="prompt-section">
+                <h3>Draw: <span id="currentPrompt">Loading...</span></h3>
+                <p class="prompt-description">Draw what you see above. Be creative and accurate!</p>
+            </div>
+            
+            <canvas id="drawingCanvas" width="500" height="350"></canvas>
+            
+            <div class="button-group">
+                <button id="undoButton" title="Undo">
+                    <span class="undo-text">Undo</span>
+                    <span class="undo-arrow">←</span>
+                </button>
+                <button id="clearButton">Clear Canvas</button>
+                <button id="submitButton">Submit Drawing</button>
+            </div>
+            
+            <div class="progress-section">
+                <p>Progress: <span id="progressCounter">0</span> / <span id="totalPrompts">10</span></p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-panel">
+            <div class="stats-section">
+                <h3>Training Statistics</h3>
+                <div class="stat-item">
+                    <span class="stat-label">Total Submissions:</span>
+                    <span class="stat-value" id="totalSubmissions">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Today's Submissions:</span>
+                    <span class="stat-value" id="todaySubmissions">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Your Contributions:</span>
+                    <span class="stat-value" id="userContributions">0</span>
+                </div>
+            </div>
+            
+            <div class="submission-history">
+                <h3>Recent Submissions</h3>
+                <div id="historyList" class="history-list">
+                    <p class="empty-history">No submissions yet. Start drawing!</p>
+                </div>
+            </div>
+            
+            <div class="custom-submission">
+                <h3>Submit Custom Drawing</h3>
+                <div class="input-group">
+                    <label for="customLabel">What did you draw?</label>
+                    <input type="text" id="customLabel" placeholder="e.g., cat, house, tree..." maxlength="50">
+                </div>
+                <button id="customSubmitButton">Submit Custom Drawing</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="training-data.js"></script>
+    <script src="training-mode.js"></script>
+</body>
+</html> 

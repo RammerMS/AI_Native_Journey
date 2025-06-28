@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Guess My Drawing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>LET AI GUESS THE DRAWING!</h1>
+    
+    <div class="left-panel">
+        <canvas id="drawingCanvas" width="500" height="350"></canvas>
+        <div class="button-group">
+            <button id="undoButton" title="Undo">
+                <span class="undo-text">Undo</span>
+                <span class="undo-arrow">←</span>
+            </button>
+            <button id="clearButton">Clear Canvas</button>
+            <button id="guessButton">Guess the Drawing</button>
+        </div>
+        <div class="model-controls">
+            <label>
+                <input type="radio" name="modelType" value="local"> Use Local Model (Works Offline)
+            </label>
+            <label>
+                <input type="radio" name="modelType" value="smart" checked> Use Smart Model (Best Accuracy)
+            </label>
+            <label>
+                <input type="radio" name="modelType" value="online"> Use Online Model (Experimental)
+            </label>
+            <label>
+                <input type="radio" name="modelType" value="azure"> Use Azure Vision (Best for Line Art)
+            </label>
+            <label>
+                <input type="radio" name="modelType" value="google"> Use Google Vision (Advanced Recognition)
+            </label>
+        </div>
+    </div>
+    
+    <div class="right-panel">
+        <div class="prediction-section">
+            <h3>AI Predictions</h3>
+            <p>AI Guess: <span id="predictionResult">Loading AI Model...</span></p>
+        </div>
+        <div class="training-link">
+            <a href="training-mode.html" class="training-button">🎨 Help Train the AI</a>
+            <p class="training-description">Contribute drawings to improve recognition accuracy</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="simple-model.js"></script>
+    <script src="smart-model.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
